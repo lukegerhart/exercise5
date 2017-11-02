@@ -60,19 +60,12 @@ public class MonkeySim {
 	int f = x * 33;
 	int r = 17;
 	int q = f;
-	for (int j = x; j >= 0; j--) {
-	    if (ml.get(j).getMonkeyNum() != 1) {
-		for (int k = 0; k < 50000; k++) {
-		    q += Math.atan(j) - Math.acos(x) + Math.asin(q);
+	for (int j = 0; j <= x; j++) {
+	    if (ml.get(j).getMonkeyNum() == 1) {
+			
+			return ml.get(j);
 		}
-	    } else if (ml.get(j).getMonkeyNum() == 1) {
-		if (q == 0) {
-		    r = 4;
-		}
-		return ml.get(j);
-	    } 
 	}
-	
 	return null;
     }
 
